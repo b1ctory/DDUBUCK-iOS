@@ -1,0 +1,6 @@
+framework module Pods_DDUBUCKTests {
+  umbrella header "Pods-DDUBUCKTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
