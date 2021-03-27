@@ -7,6 +7,7 @@ target 'DDUBUCK' do
 
   # Pods for DDUBUCK
   pod 'naveridlogin-sdk-ios'
+  pod 'Alamofire'
 
   target 'DDUBUCKTests' do
     inherit! :search_paths

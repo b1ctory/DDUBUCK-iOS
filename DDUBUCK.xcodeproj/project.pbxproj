@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		4578CCAF25F750AD00BA67D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4578CCAD25F750AD00BA67D5 /* LaunchScreen.storyboard */; };
 		4578CCBA25F750AD00BA67D5 /* DDUBUCKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578CCB925F750AD00BA67D5 /* DDUBUCKTests.swift */; };
 		4578CCC525F750AD00BA67D5 /* DDUBUCKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578CCC425F750AD00BA67D5 /* DDUBUCKUITests.swift */; };
+		45BB35B1260F71740032FDD8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB35B0260F71740032FDD8 /* LoginViewController.swift */; };
 		8EA80E3EB1A3AD9F769C844C /* Pods_DDUBUCK_DDUBUCKUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE5DAA94DB475B72574300D /* Pods_DDUBUCK_DDUBUCKUITests.framework */; };
 		CB5C3D83D95E9A8FA4825775 /* Pods_DDUBUCKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045765DAE63D275FCEF17634 /* Pods_DDUBUCKTests.framework */; };
 		D4289BC32DAB0C3F5E24BBE5 /* Pods_DDUBUCK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB64DB7E1CD0D39683EDB7E5 /* Pods_DDUBUCK.framework */; };
@@ -54,6 +55,7 @@
 		4578CCC025F750AD00BA67D5 /* DDUBUCKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDUBUCKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4578CCC425F750AD00BA67D5 /* DDUBUCKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDUBUCKUITests.swift; sourceTree = "<group>"; };
 		4578CCC625F750AD00BA67D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45BB35B0260F71740032FDD8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4E7B89DAE922DB1266221FA6 /* Pods-DDUBUCK-DDUBUCKUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDUBUCK-DDUBUCKUITests.release.xcconfig"; path = "Target Support Files/Pods-DDUBUCK-DDUBUCKUITests/Pods-DDUBUCK-DDUBUCKUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4F0255726D7B65A6D11D458D /* Pods-DDUBUCK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDUBUCK.release.xcconfig"; path = "Target Support Files/Pods-DDUBUCK/Pods-DDUBUCK.release.xcconfig"; sourceTree = "<group>"; };
 		A4790410D04A461F53E14588 /* Pods-DDUBUCKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DDUBUCKTests.debug.xcconfig"; path = "Target Support Files/Pods-DDUBUCKTests/Pods-DDUBUCKTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		4578CCA125F750A900BA67D5 /* DDUBUCK */ = {
 			isa = PBXGroup;
 			children = (
+				45BB35AF260F71190032FDD8 /* login */,
 				4578CCA225F750A900BA67D5 /* AppDelegate.swift */,
 				4578CCA425F750A900BA67D5 /* SceneDelegate.swift */,
 				4578CCA625F750A900BA67D5 /* ViewController.swift */,
@@ -145,6 +148,14 @@
 			path = DDUBUCKUITests;
 			sourceTree = "<group>";
 		};
+		45BB35AF260F71190032FDD8 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				45BB35B0260F71740032FDD8 /* LoginViewController.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		6CB420ECAF484FC1848BB52C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +176,6 @@
 				A4790410D04A461F53E14588 /* Pods-DDUBUCKTests.debug.xcconfig */,
 				FB247DA291B2370B1EAC1A2F /* Pods-DDUBUCKTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BB35B1260F71740032FDD8 /* LoginViewController.swift in Sources */,
 				4578CCA725F750A900BA67D5 /* ViewController.swift in Sources */,
 				4578CCA325F750A900BA67D5 /* AppDelegate.swift in Sources */,
 				4578CCA525F750A900BA67D5 /* SceneDelegate.swift in Sources */,
