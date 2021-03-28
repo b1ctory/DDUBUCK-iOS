@@ -9,12 +9,8 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    
-    
-    @IBOutlet weak var navBar: UINavigationBar!
-    
     override func viewDidLoad() {
-        navBar.topItem?.title = "제목제목!!"
+        
     }
 }
 
