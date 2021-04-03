@@ -8,6 +8,7 @@ target 'DDUBUCK' do
   # Pods for DDUBUCK
   pod 'naveridlogin-sdk-ios'
   pod 'Alamofire'
+  pod 'KakaoSDKUser'  # 카카오 로그인, 사용자 관리
 
   target 'DDUBUCKTests' do
     inherit! :search_paths

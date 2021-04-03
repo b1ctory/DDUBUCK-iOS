@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 import NaverThirdPartyLogin
 import Alamofire
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class LoginViewController: UIViewController {
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
