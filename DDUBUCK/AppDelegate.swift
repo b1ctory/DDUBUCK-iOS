@@ -7,6 +7,7 @@
 
 import UIKit
 import NaverThirdPartyLogin
+import KakaoSDKCommon
 import KakaoSDKAuth
 
 @main
@@ -14,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        KakaoSDKCommon.initSDK(appKey: "77629a2e99409577163d7742096517e9")
         
         let instance = NaverThirdPartyLoginConnection.getSharedInstance()
         
@@ -45,9 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return AuthController.handleOpenUrl(url: url)
         }
         
+        
         NaverThirdPartyLoginConnection.getSharedInstance()?.application(app, open: url, options: options)
-        return true
-      }
+        return false
+    }
     
     // MARK: UISceneSession Lifecycle
     

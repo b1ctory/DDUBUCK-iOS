@@ -28,6 +28,14 @@
 				<string>ddubuck</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>kaako77629a2e99409577163d7742096517e9</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -35,7 +43,12 @@
 	<array>
 		<string>naversearchapp</string>
 		<string>naversearchthirdlogin</string>
+        <!-- 카카오톡으로 로그인 -->
+        <string>kakaokompassauth</string>
+        <!-- 카카오링크 -->
+        <string>kakaolink</string>
 	</array>
+    
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

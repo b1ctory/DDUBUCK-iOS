@@ -8,7 +8,9 @@ target 'DDUBUCK' do
   # Pods for DDUBUCK
   pod 'naveridlogin-sdk-ios'
   pod 'Alamofire'
-  pod 'KakaoSDKUser'  # 카카오 로그인, 사용자 관리
+  pod 'KakaoSDK'
+  pod 'KakaoSDKUser'  # 카카오 - 필수 요소 담은 공통 모듈
+  pod 'KakaoSDKAuth' # 카카오 로그인
 
   target 'DDUBUCKTests' do
     inherit! :search_paths

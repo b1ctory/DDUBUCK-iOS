@@ -9,13 +9,14 @@ import Foundation
 import UIKit
 import NaverThirdPartyLogin
 import Alamofire
-import KakaoSDKCommon
 import KakaoSDKAuth
+import KakaoSDKCommon
 import KakaoSDKUser
 
 class LoginViewController: UIViewController {
     let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
     
+    @IBOutlet weak var kakaoLoginButton: UIButton!
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("로그인", for: .normal)
@@ -61,19 +62,6 @@ class LoginViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         layout()
         
-        if (UserApi.isKakaoTalkLoginAvailable()) {
-            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    print("loginWithKakaoTalk() success.")
-
-                    //do something
-                    _ = oauthToken
-                }
-            }
-        }
     }
     
     @objc private func touchUpLoginButton(_ sender: UIButton) {
@@ -143,6 +131,35 @@ class LoginViewController: UIViewController {
             .constraint(equalTo: emailLabel.bottomAnchor, constant: 30).isActive = true
         nicknameLabel.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
         nicknameLabel.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
+    }
+    
+    @IBAction func clickKakaoLogin(_ sender: Any) {
+        // 카카오톡 설치 여부 확인
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+                    
+                    //do something
+                    _ = oauthToken
+                }
+            }
+        } else {
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoAccount() success.")
+                    
+                    //do something
+                    _ = oauthToken
+                }
+            }
+        }
     }
 }
 
