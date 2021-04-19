@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var kakaoLoginButton: UIButton!
     private let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("로그인", for: .normal)
+        button.setTitle("네이버 로그인", for: .normal)
         button.addTarget(self, action: #selector(touchUpLoginButton(_:)), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
